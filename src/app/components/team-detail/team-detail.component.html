@@ -1,0 +1,16 @@
+<p>team details works: {{data}}</p>
+
+<div *ngIf="team" class="team">
+    <div class="team-name">
+        {{team[0].name}}
+    </div>
+    <div class="conference">
+        {{team[0].conference.name}} Conference
+    </div>
+    <div class="division">
+        {{team[0].division.name}} Division
+    </div>
+    <div class="venue">
+        {{team[0].venue.name}}, {{team[0].venue.city}}
+    </div>
+</div>

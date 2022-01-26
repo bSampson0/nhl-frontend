@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="teams">
+        <ul *ngIf="teams.length > 0">
+            <li *ngFor="let team of teams">
+                <a (click)="getTeam(team.id)">{{team.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="team" class="team">
+        <div class="team-name">
+            {{team[0].name}}
+        </div>
+        <div class="conference">
+            {{team[0].conference.name}} Conference
+        </div>
+        <div class="division">
+            {{team[0].division.name}} Division
+        </div>
+        <div class="venue">
+            {{team[0].venue.name}}, {{team[0].venue.city}}
+        </div>
+        <div class="stats-link">
+            <button (click)="getTeamStats(team[0].id)">Get Season Stats</button>
+        </div>
+    </div>
+    <div *ngIf="teamStats" class="teamStats">
+        <div class="wins">
+            W: {{teamStats[0].stat.wins}}
+        </div>
+        <div class="losses">
+            L: {{teamStats[0].stat.losses}}
+        </div>
+        <div class="otl">
+            OTL: {{teamStats[0].stat.ot}}
+        </div>
+        <div class="points">
+            PTS: {{teamStats[0].stat.pts}}
+        </div>
+        <div class="rank">
+            Rank: {{teamStats[1].stat.pts}} out of 32
+        </div>
+        <div class="roster-link">
+            <button>Get Team Roster</button>
+        </div>
+    </div>
+</div>
