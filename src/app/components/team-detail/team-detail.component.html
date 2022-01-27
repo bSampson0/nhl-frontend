@@ -1,16 +1,51 @@
-<p>team details works: {{data}}</p>
-
-<div *ngIf="team" class="team">
-    <div class="team-name">
-        {{team[0].name}}
+<div class="container">
+  <div *ngIf="team" class="team">
+      <div class="team-name bold">
+          {{team[0].name}}
+          <hr>
+      </div>
+      <div class="conference">
+          <span class="subtitle">Conference: </span>{{team[0].conference.name}}
+      </div>
+      <div class="division">
+          <span class="subtitle">Division: </span>{{team[0].division.name}}
+      </div>
+      <div class="venue">
+          <span class="subtitle">Venue: </span>{{team[0].venue.name}}, {{team[0].venue.city}}
+      </div>
+  </div>
+  <div *ngIf="teamStats" class="teamStats">
+    <br>
+    <div class="title bold">
+      Season Stats
     </div>
-    <div class="conference">
-        {{team[0].conference.name}} Conference
+    <hr>
+    <div class="wins">
+        <span class="subtitle">Wins: </span>{{teamStats[0].stat.wins}}
     </div>
-    <div class="division">
-        {{team[0].division.name}} Division
+    <div class="losses">
+        <span class="subtitle">Losses: </span>{{teamStats[0].stat.losses}}
     </div>
-    <div class="venue">
-        {{team[0].venue.name}}, {{team[0].venue.city}}
+    <div class="otl">
+        <span class="subtitle">OTL: </span>{{teamStats[0].stat.ot}}
     </div>
+    <div class="points">
+        <span class="subtitle">Points: </span>{{teamStats[0].stat.pts}}
+    </div>
+    <div class="rank">
+        <span class="subtitle">Rank: </span>{{teamStats[1].stat.pts}} out of 32
+    </div>
+  </div>
+  <div class="roster">
+    <br>
+    <div class="title bold">
+      Team Roster
+    </div>
+    <hr>
+    <ul *ngFor="let player of teamRoster">
+      <li [routerLink]="['/player', player.person.id]">
+        {{player.person.fullName}}
+      </li>
+    </ul>
+  </div>
 </div>
