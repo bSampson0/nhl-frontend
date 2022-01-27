@@ -12,6 +12,7 @@ export class TeamDetailComponent implements OnInit {
   team: any;
   teamStats: any;
   teamRoster: any;
+  previousGame: any;
 
   constructor(private teamsService: TeamsService, private _route: ActivatedRoute) { }
 
@@ -41,11 +42,20 @@ export class TeamDetailComponent implements OnInit {
       })
   }
 
+  getPreviousGame(id: number): void {
+    this.teamsService.getPreviousGame(id)
+      .subscribe((game: any) => {
+        this.previousGame = game
+        console.log(`previous game: ${game}`)
+      })
+  }
+
   ngOnInit(){
     this._route.params.subscribe(params => {
       this.getTeam(+params['id'])
       this.getTeamStats(+params['id'])
       this.getTeamRoster(+params['id'])
+      this.getPreviousGame(+params['id'])
     })
   }
 

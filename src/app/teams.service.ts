@@ -42,6 +42,14 @@ export class TeamsService {
       )
   }
 
+  getPreviousGame(id: number): Observable<any> {
+    console.log('getting previous game...')
+    return this.http.get<any>(`http://localhost:6969/team/${id}/previous-game`)
+      .pipe(
+        catchError(this.handleError<any>('getPreviousGame', []))
+      )
+  }
+
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 

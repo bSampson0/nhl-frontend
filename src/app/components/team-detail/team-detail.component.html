@@ -36,6 +36,20 @@
         <span class="subtitle">Rank: </span>{{teamStats[1].stat.pts}} out of 32
     </div>
   </div>
+  <div class="games" *ngIf="previousGame">
+    <br>
+    <p class="bold">
+      Last Game
+    </p>
+    <hr>
+    <div class="last-game">
+      {{previousGame[0].teams.away.team.name}}: {{previousGame[0].teams.away.score}} <br>
+      {{previousGame[0].teams.home.team.name}}: {{previousGame[0].teams.home.score}}
+    </div>
+    <div class="next-game">
+
+    </div>
+  </div>
   <div class="roster">
     <br>
     <div class="title bold">
