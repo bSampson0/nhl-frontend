@@ -1,1 +1,27 @@
-<p>player-detail works!</p>
+<div class="container">
+    <div class="player-bio" *ngIf="playerBio">
+        <div class="name">
+            Name: {{playerBio.fullName}}
+        </div>
+        <div class="team">
+            Team: {{playerBio.currentTeam.name}}
+        </div>
+        <div class="position">
+            Position: {{playerBio.primaryPosition.name}}
+        </div>
+    </div>
+    <div class="player-stats" *ngIf="playerStats">
+        <div class="goals">
+            Goals: {{playerStats.goals}}
+        </div>
+        <div class="assists">
+            Assists: {{playerStats.assists}}
+        </div>
+        <div class="points">
+            Points: {{playerStats.points}}
+        </div>
+        <div class="hits">
+            Hits: {{playerStats.hits}}
+        </div>
+    </div>
+</div>

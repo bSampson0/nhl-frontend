@@ -7,6 +7,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
+import {MatTableModule} from '@angular/material/table';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +18,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { TeamDetailComponent } from './components/team-detail/team-detail.component';
 import { PlayerComponent } from './pages/player/player.component';
 import { PlayerDetailComponent } from './components/player-detail/player-detail.component';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +38,8 @@ import { PlayerDetailComponent } from './components/player-detail/player-detail.
     MatToolbarModule,
     MatListModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
