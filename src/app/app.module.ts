@@ -18,6 +18,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { TeamDetailComponent } from './components/team-detail/team-detail.component';
 import { PlayerComponent } from './pages/player/player.component';
 import { PlayerDetailComponent } from './components/player-detail/player-detail.component';
+import { PlayerGamelogChartComponent } from './components/player-gamelog-chart/player-gamelog-chart.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { PlayerDetailComponent } from './components/player-detail/player-detail.
     TeamDetailComponent,
     PlayerComponent,
     PlayerDetailComponent,
+    PlayerGamelogChartComponent,
   ],
   imports: [
     BrowserModule,
