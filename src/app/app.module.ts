@@ -19,6 +19,7 @@ import { TeamDetailComponent } from './components/team-detail/team-detail.compon
 import { PlayerComponent } from './pages/player/player.component';
 import { PlayerDetailComponent } from './components/player-detail/player-detail.component';
 import { PlayerGamelogChartComponent } from './components/player-gamelog-chart/player-gamelog-chart.component';
+import { GretzkyComponent } from './components/gretzky/gretzky.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { PlayerGamelogChartComponent } from './components/player-gamelog-chart/p
     PlayerComponent,
     PlayerDetailComponent,
     PlayerGamelogChartComponent,
+    GretzkyComponent,
   ],
   imports: [
     BrowserModule,
