@@ -1,0 +1,12 @@
+<div>
+  <div class="division" *ngFor="let team of easternConference">
+    <div class="division">
+      {{team.conferenceRank}} {{team.team.name}}
+    </div>
+  </div>
+  <div class="conference" *ngFor="let team of westernConference">
+    <div class="teams">
+      {{team.conferenceRank}} {{team.team.name}}
+    </div>
+  </div>
+</div>
